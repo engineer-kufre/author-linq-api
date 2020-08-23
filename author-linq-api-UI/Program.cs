@@ -41,7 +41,7 @@ namespace author_linq_api_UI
             HttpResponseMessage response = await client.GetAsync(url);
             var content = await response.Content.ReadAsStringAsync();
 
-            //deserialize string to get root object
+            //deserialize string to get page object
             Page page = JsonSerializer.Deserialize<Page>(content);
 
             foreach (var author in page.data)
