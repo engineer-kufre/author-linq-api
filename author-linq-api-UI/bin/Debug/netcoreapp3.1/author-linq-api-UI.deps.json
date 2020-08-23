@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "author-linq-api-UI/1.0.0": {
+        "dependencies": {
+          "author-linq-api-ClassLib": "1.0.0"
+        },
+        "runtime": {
+          "author-linq-api-UI.dll": {}
+        }
+      },
+      "author-linq-api-ClassLib/1.0.0": {
+        "runtime": {
+          "author-linq-api-ClassLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "author-linq-api-UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "author-linq-api-ClassLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

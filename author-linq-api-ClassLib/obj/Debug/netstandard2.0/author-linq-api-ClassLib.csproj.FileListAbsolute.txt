@@ -1,0 +1,9 @@
+C:\Users\Kufreabasi Ita\Desktop\Coding\Decagon Training\Tasks\author-linq-api\author-linq-api-ClassLib\bin\Debug\netstandard2.0\author-linq-api-ClassLib.deps.json
+C:\Users\Kufreabasi Ita\Desktop\Coding\Decagon Training\Tasks\author-linq-api\author-linq-api-ClassLib\bin\Debug\netstandard2.0\author-linq-api-ClassLib.dll
+C:\Users\Kufreabasi Ita\Desktop\Coding\Decagon Training\Tasks\author-linq-api\author-linq-api-ClassLib\bin\Debug\netstandard2.0\author-linq-api-ClassLib.pdb
+C:\Users\Kufreabasi Ita\Desktop\Coding\Decagon Training\Tasks\author-linq-api\author-linq-api-ClassLib\obj\Debug\netstandard2.0\author-linq-api-ClassLib.csprojAssemblyReference.cache
+C:\Users\Kufreabasi Ita\Desktop\Coding\Decagon Training\Tasks\author-linq-api\author-linq-api-ClassLib\obj\Debug\netstandard2.0\author-linq-api-ClassLib.AssemblyInfoInputs.cache
+C:\Users\Kufreabasi Ita\Desktop\Coding\Decagon Training\Tasks\author-linq-api\author-linq-api-ClassLib\obj\Debug\netstandard2.0\author-linq-api-ClassLib.AssemblyInfo.cs
+C:\Users\Kufreabasi Ita\Desktop\Coding\Decagon Training\Tasks\author-linq-api\author-linq-api-ClassLib\obj\Debug\netstandard2.0\author-linq-api-ClassLib.csproj.CoreCompileInputs.cache
+C:\Users\Kufreabasi Ita\Desktop\Coding\Decagon Training\Tasks\author-linq-api\author-linq-api-ClassLib\obj\Debug\netstandard2.0\author-linq-api-ClassLib.dll
+C:\Users\Kufreabasi Ita\Desktop\Coding\Decagon Training\Tasks\author-linq-api\author-linq-api-ClassLib\obj\Debug\netstandard2.0\author-linq-api-ClassLib.pdb
