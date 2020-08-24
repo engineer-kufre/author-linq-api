@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text.Json;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace author_linq_api_UI
@@ -23,18 +24,29 @@ namespace author_linq_api_UI
             AuthorDb all = new AuthorDb();
 
             //make GET requests and save author objects to author repository list
-            GetAuthorRequest("https://jsonmock.hackerrank.com/api/article_users/search?page=1", all.allAuthors);
-            GetAuthorRequest("https://jsonmock.hackerrank.com/api/article_users/search?page=2", all.allAuthors);
-
-            //delay program to allow GetAuthorRequest method calls run first
-            System.Threading.Thread.Sleep(10000);
+            CreateAuthorsList(all);
 
             //run Form app
             Application.Run(new Form1(all));
         }
 
+        //method to make GET requests and save author objects to author repository list
+        private static async void CreateAuthorsList(AuthorDb all)
+        {
+            for (int i = 1; i < 3; i++)
+            {
+                Task<Page> page = GetAuthorRequest("https://jsonmock.hackerrank.com/api/article_users/search?page=" + i);
+                Page apiPage = await page;
+
+                foreach (var author in apiPage.data)
+                {
+                    all.allAuthors.Add(author);
+                }
+            }
+        }
+
         //method for making GET request
-        async static void GetAuthorRequest(string url, List<Author> allAuthors)
+        async static Task<Page> GetAuthorRequest(string url)
         {
             //create HttpClient instance
             HttpClient client = new HttpClient();
@@ -43,11 +55,7 @@ namespace author_linq_api_UI
 
             //deserialize string to get page object
             Page page = JsonSerializer.Deserialize<Page>(content);
-
-            foreach (var author in page.data)
-            {
-                allAuthors.Add(author);
-            }
+            return page;
         }
     }
 }
