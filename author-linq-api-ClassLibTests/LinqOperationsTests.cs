@@ -47,7 +47,7 @@ namespace author_linq_api_ClassLib.Tests
         public void GetUsernamesSortedByRecordDateTest()
         {
             //Arrange
-            int threshold = 1290000000;
+            long threshold = 1290000000;
             int expected = 2;
 
             //Act
