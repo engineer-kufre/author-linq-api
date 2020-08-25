@@ -1,5 +1,5 @@
 # author-linq-api
-linq-and-get redone with WinForms UI, structured Class Library and unit test suite
+linq-and-get redone with WinForms UI, structured Class Library, loose coupling and unit test suite
 
 This project consumes a REST API containing information about a collection of users and the articles they created. The goal was to use the API to get the following:
 
