@@ -32,7 +32,6 @@
             this.getUsernameByCountListBoxButton = new System.Windows.Forms.Button();
             this.getUsernameListBoxThresholdLabel = new System.Windows.Forms.Label();
             this.getUsernameByCountListBoxThreshold = new System.Windows.Forms.TextBox();
-            this.getUsernameByDateListBoxThreshold = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.getUsernameByDateListBoxButton = new System.Windows.Forms.Button();
             this.getUsernamesByDateListBox = new System.Windows.Forms.ListBox();
@@ -46,6 +45,7 @@
             this.highestCommentCountTextBox = new System.Windows.Forms.TextBox();
             this.getUsernameByCommentCountButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // getUsernamesByCountListBox
@@ -87,22 +87,14 @@
             this.getUsernameByCountListBoxThreshold.Size = new System.Drawing.Size(174, 34);
             this.getUsernameByCountListBoxThreshold.TabIndex = 3;
             // 
-            // getUsernameByDateListBoxThreshold
-            // 
-            this.getUsernameByDateListBoxThreshold.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.getUsernameByDateListBoxThreshold.Location = new System.Drawing.Point(511, 450);
-            this.getUsernameByDateListBoxThreshold.Name = "getUsernameByDateListBoxThreshold";
-            this.getUsernameByDateListBoxThreshold.Size = new System.Drawing.Size(174, 34);
-            this.getUsernameByDateListBoxThreshold.TabIndex = 3;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(559, 487);
+            this.label1.Location = new System.Drawing.Point(543, 487);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
+            this.label1.Size = new System.Drawing.Size(110, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Threshold";
+            this.label1.Text = "Threshold Date";
             // 
             // getUsernameByDateListBoxButton
             // 
@@ -176,9 +168,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(511, 90);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 20);
+            this.label7.Size = new System.Drawing.Size(108, 20);
             this.label7.TabIndex = 2;
-            this.label7.Text = "threshold.";
+            this.label7.Text = "threshold date.";
             // 
             // label8
             // 
@@ -222,12 +214,20 @@
             this.resetButton.UseVisualStyleBackColor = false;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.Location = new System.Drawing.Point(511, 457);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(174, 27);
+            this.dateTimePicker.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(191)))), ((int)(((byte)(218)))));
             this.ClientSize = new System.Drawing.Size(892, 726);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.getUsernameByCommentCountButton);
             this.Controls.Add(this.highestCommentCountTextBox);
@@ -241,7 +241,6 @@
             this.Controls.Add(this.getUsernamesByDateListBox);
             this.Controls.Add(this.getUsernameByDateListBoxButton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.getUsernameByDateListBoxThreshold);
             this.Controls.Add(this.getUsernameByCountListBoxThreshold);
             this.Controls.Add(this.getUsernameListBoxThresholdLabel);
             this.Controls.Add(this.getUsernameByCountListBoxButton);
@@ -262,7 +261,6 @@
         private System.Windows.Forms.Button getUsernameByCountListBoxButton;
         private System.Windows.Forms.Label getUsernameListBoxThresholdLabel;
         private System.Windows.Forms.TextBox getUsernameByCountListBoxThreshold;
-        private System.Windows.Forms.TextBox getUsernameByDateListBoxThreshold;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button getUsernameByDateListBoxButton;
         private System.Windows.Forms.ListBox getUsernamesByDateListBox;
@@ -276,6 +274,7 @@
         private System.Windows.Forms.TextBox highestCommentCountTextBox;
         private System.Windows.Forms.Button getUsernameByCommentCountButton;
         private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
     }
 }
 

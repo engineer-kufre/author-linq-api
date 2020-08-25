@@ -8,6 +8,6 @@ namespace author_linq_api_ClassLib
     {
         List<string> GetUsernames(int threshold, List<Author> allAuthors);
         string GetUsernameWithHighestCommentCount(List<Author> allAuthors);
-        List<string> GetUsernamesSortedByRecordDate(int threshold, List<Author> allAuthors);
+        List<string> GetUsernamesSortedByRecordDate(long threshold, List<Author> allAuthors);
     }
 }

@@ -39,7 +39,7 @@ namespace author_linq_api_UI
         {
             try
             {
-                int threshold = int.Parse(getUsernameByDateListBoxThreshold.Text);
+                long threshold = (dateTimePicker.Value.Ticks - 621356166000000000) / 10000000;
                 List<string> result = Operation.GetUsernamesSortedByRecordDate(threshold, All.allAuthors);
                 getUsernamesByDateListBox.DataSource = result;
                 getUsernamesByDateListBox.DisplayMember = "username";

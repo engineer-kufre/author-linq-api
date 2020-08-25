@@ -34,7 +34,7 @@ namespace author_linq_api_ClassLib
         }
 
         //returns a list of the names of authors sorted by when their record was created according to a set threshold
-        public List<string> GetUsernamesSortedByRecordDate(int threshold, List<Author> allAuthors)
+        public List<string> GetUsernamesSortedByRecordDate(long threshold, List<Author> allAuthors)
         {
             List<string> authorsCreatedAfterThreshold = new List<string>();
             var query = allAuthors.Where(a => a.created_at > threshold)
