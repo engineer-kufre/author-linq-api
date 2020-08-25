@@ -7,13 +7,15 @@ namespace author_linq_api_UI
 {
     public partial class Form1 : Form
     {
+        private readonly ILinqOperations Operation;
         public AuthorDb All { get; set; }
 
         //form constructor
-        public Form1(AuthorDb all)
+        public Form1(AuthorDb all, ILinqOperations operations)
         {
             InitializeComponent();
             All = all;
+            Operation = operations;
         }
 
         //click event handler for getUsernameByCountListBoxButton
@@ -22,7 +24,7 @@ namespace author_linq_api_UI
             try
             {
                 int threshold = int.Parse(getUsernameByCountListBoxThreshold.Text);
-                List<string> result = LinqOperations.GetUsernames(threshold, All.allAuthors);
+                List<string> result = Operation.GetUsernames(threshold, All.allAuthors);
                 getUsernamesByCountListBox.DataSource = result;
                 getUsernamesByCountListBox.DisplayMember = "username";
             }
@@ -38,7 +40,7 @@ namespace author_linq_api_UI
             try
             {
                 int threshold = int.Parse(getUsernameByDateListBoxThreshold.Text);
-                List<string> result = LinqOperations.GetUsernamesSortedByRecordDate(threshold, All.allAuthors);
+                List<string> result = Operation.GetUsernamesSortedByRecordDate(threshold, All.allAuthors);
                 getUsernamesByDateListBox.DataSource = result;
                 getUsernamesByDateListBox.DisplayMember = "username";
             }
@@ -51,7 +53,7 @@ namespace author_linq_api_UI
         //click event handler for getUsernameByCommentCountButton
         private void getUsernameByCommentCountButton_Click(object sender, EventArgs e)
         {
-            highestCommentCountTextBox.Text = LinqOperations.GetUsernameWithHighestCommentCount(All.allAuthors);
+            highestCommentCountTextBox.Text = Operation.GetUsernameWithHighestCommentCount(All.allAuthors);
         }
 
         //click event handler for resetButton

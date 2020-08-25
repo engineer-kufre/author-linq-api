@@ -1,8 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using author_linq_api_ClassLib;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace author_linq_api_ClassLib.Tests
 {
@@ -16,6 +14,7 @@ namespace author_linq_api_ClassLib.Tests
             new Author(){id = 3, username = "Kofo Baker", about = "actor", comment_count = 1000, created_at = 1442875986, submission_count = 50, submitted = 135, updated_at = DateTime.Now},
             new Author(){id = 4, username = "Segun Arinze", about = "actor", comment_count = 20000, created_at = 1287564398, submission_count = 220, submitted = 305, updated_at = DateTime.Now}
         };
+        LinqOperations operations = new LinqOperations();
 
         [TestMethod()]
         public void GetUsernamesTest()
@@ -25,7 +24,7 @@ namespace author_linq_api_ClassLib.Tests
             int expected = 3;
 
             //Act
-            int actual = LinqOperations.GetUsernames(threshold, allAuthors).Count;
+            int actual = operations.GetUsernames(threshold, allAuthors).Count;
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -38,7 +37,7 @@ namespace author_linq_api_ClassLib.Tests
             string expected = "Childish Gambino";
 
             //Act
-            string actual = LinqOperations.GetUsernameWithHighestCommentCount(allAuthors);
+            string actual = operations.GetUsernameWithHighestCommentCount(allAuthors);
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -52,7 +51,7 @@ namespace author_linq_api_ClassLib.Tests
             int expected = 2;
 
             //Act
-            int actual = LinqOperations.GetUsernamesSortedByRecordDate(threshold, allAuthors).Count;
+            int actual = operations.GetUsernamesSortedByRecordDate(threshold, allAuthors).Count;
 
             //Assert
             Assert.AreEqual(expected, actual);

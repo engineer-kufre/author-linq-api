@@ -26,8 +26,12 @@ namespace author_linq_api_UI
             //make GET requests and save author objects to author repository list
             CreateAuthorsList(all);
 
+            //create the connection between the UI and the library
+            DISocket.PlugSocket();
+            ILinqOperations operations = DISocket.Isocket;
+
             //run Form app
-            Application.Run(new Form1(all));
+            Application.Run(new Form1(all, operations));
         }
 
         //method to make GET requests and save author objects to author repository list
